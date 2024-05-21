@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch Exchange Posts</title>
+</head>
+<body>
+    <h1>Watch Exchange Posts</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Created UTC</th>
+            <th>Username</th>
+            <th>Num Comments</th>
+            <th>Upvotes</th>
+            <th>Title</th>
+            <th>Brand</th>
+            <th>Price</th>
+        </tr>
+        {% for post in posts %}
+        <tr>
+            <td>{{ post[0] }}</td>
+            <td>{{ post[1] }}</td>
+            <td>{{ post[2] }}</td>
+            <td>{{ post[3] }}</td>
+            <td>{{ post[4] }}</td>
+            <td>{{ post[5] }}</td>
+            <td>{{ post[6] }}</td>
+            <td>{{ post[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
