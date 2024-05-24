@@ -8,14 +8,12 @@ RUN apt-get update && apt-get install -y \
     gcc \
     && rm -rf /var/lib/apt/lists/*
 
-# Upgrade pip
 RUN pip install --upgrade pip
 
-# Copy and install dependencies
+
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application
 COPY . /app
 
 # Make port 5000 available to the world outside this container.
